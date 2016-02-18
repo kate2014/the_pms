@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://v.yunzhanggui.net/Report/reportchannel/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+                                <title>订单来源分析 - 云掌柜</title>                                                <meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<link rel="shortcut icon" href="http://v.yunzhanggui.net/favicon.ico">
+<link href="../css/miot.css" rel="stylesheet" type="text/css">
+<link href="../css/inn.css" rel="stylesheet" type="text/css">
+<link href="../css/Calendar.css" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+    
+    <div class="main">
+    	<!--Header-->
+	    <!--Header-->
+<div id="header">
+    <div class="inn-name">
+      <h2>翰院壹号客栈</h2>
+        <p><span class="user">测试</span><span tag="regards">，</span>&nbsp;&nbsp;<a href="http://v.yunzhanggui.net/Logout/">退出</a></p>
+    </div>
+    <div class="logo"><a href="http://v.yunzhanggui.net/"><span class="logo_big"></span></a></div>
+
+    <div id="sub-nav">
+        <a href="../index.html" >房态</a><a href="../Report/reportincome.html" class="active">统计</a><a href="../Crm/checkinguest.html" class="">客人</a>   <div class="daybook" title="记一笔" ga="a" gname="顶部_记一笔" id="men_recodesum"></div>
+    </div>
+  </div>
+
+<!--end Header-->
+        <!--end Header-->
+        <div class="clear"></div>
+        <!--main container-->
+        <div id="main-container">
+            <!--Left Navegation-->
+	        <!--Left Navegation-->
+<div class="sidebar">
+	<ul>
+	   	   <li ><a href="../Report/reportincome.html">财务收支</a></li>
+	   
+		<li><a href="../Report/reportroom.html">运营报告</a></li>
+		<li class="on"><a href="../Report/reportchannel.html">订单来源分析</a></li>
+   			</ul>
+</div>
+
+<!--end Left Navegation-->
+            <!--end Left Navegation-->
+            <!--Main content-->
+            <div class="main-content">
+            	<div class="breadcrumbs" style="display:none"><a>首页</a> &gt; 数据分析 </div>
+                <!--流水统计开始-->
+                <div class="page-cnt">
+                    <div class="page-header page-header-report clx">
+	                    <!--report date form start-->
+
+<form action="http://v.yunzhanggui.net/Report/reportchannel">
+	<div id="reportid" class="date-box clx" style="width:401px;">
+		<div id="innid" t="innid" class="droplist fl mr10" style="width:126px;" value="287" name="innid" tag="dropdownlist">
+			<span class="value" tag="value" value="287">翰院壹号客栈</span>
+			<div id="papersBox" class="ip-dropdown" style="max-height:170px; overflow-y:auto;display: none; width: 152px; z-index: 1060;" tag="channel_innid">
+								<input type="hidden" id="hide_innid" name="innid" value="">
+				<div>
+												<div value="287" tag="option"><a href="javascript:;" value="287" tag="option">翰院壹号客栈</a></div>				</div>
+			</div>
+		</div>
+
+		<div id="datelist" class="droplist fl mr10" style="width:66px;" value="" tag="dropdownlist">
+			<span class="value" tag="value" value="">快捷日期</span>
+			<div id="papersBox2" class="ip-dropdown" style="display: none; width: 92px; z-index: 1060;" tag="date_list">
+				<input type="hidden" id="date" name="date" value="">
+				<div>
+												<div value="today" tag="option"><a value="today" href="javascript:;" tag="option">今日</a></div>							<div value="yesterday" tag="option"><a value="yesterday" href="javascript:;" tag="option">昨日</a></div>							<div value="thismonth" tag="option"><a value="thismonth" href="javascript:;" tag="option">本月</a></div>							<div value="last7days" tag="option"><a value="last7days" href="javascript:;" tag="option">过去7天</a></div>							<div value="last30days" tag="option"><a value="last30days" href="javascript:;" tag="option">过去30天</a></div>				</div>
+			</div>
+		</div>
+
+		<div class="fl datepos" style="width:135px;" tag="dateval">
+			<input type="hidden" id="paytype" name="paytype">
+			<input id="dateval" type="text" value="12月01日 - 12月17日" class="datebox" style="width:121px;">
+			<div id="datevallist" class="box" style="display:none;">
+				<input type="text" value="2015-12-01" id="fromdate" name="fromdate" class="datebox hasDatepicker">
+				-
+				<input type="text" value="2015-12-17" id="enddate" name="enddate" class="datebox hasDatepicker">
+				<input type="button" class="btn btn-primary dealbtn" id="reloadbtn" value="确定">
+			</div>
+		</div>
+	</div>
+</form>
+<!--report date form end-->
+
+
+
+                            <div class="chart-type">
+                                <ul class="clx">
+                                    <li class="on" style="width:120px"><a href="http://v.yunzhanggui.net/Report/reportchannel/#?">订单来源分析</a></li>
+                                    <li><a href="http://v.yunzhanggui.net/Report/reportresell">分销订单</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="tip-remind mb15">按办理入住的订单金额统计。</div>
+
+                    <div class="report-summury rs-orderfrom">
+	                        <h2>订单来源占比</h2>
+	                        <div class="grid grid-10 clx">
+	                            <div class="col-1 col-6" style="">
+	                                <div id="channelchart" style="width:80%; height:400px;margin:0 auto;" data-highcharts-chart="0"><div class="highcharts-container" id="highcharts-0" style="position: relative; overflow: hidden; width: 654px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg version="1.1" style="font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="654" height="400"><desc>Created with Highcharts 4.0.1</desc><defs><clippath id="highcharts-1"><rect x="0" y="0" width="634" height="375"></rect></clippath></defs><rect x="0" y="0" width="654" height="400" strokeWidth="0" fill="#FFFFFF" class=" highcharts-background"></rect><g class="highcharts-series-group" zIndex="3"><g class="highcharts-series highcharts-tracker" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)" style="cursor:pointer;"><path fill="#058dc7" d="M 316.98090563715357 93.75000194450504 A 93.75 93.75 0 1 1 235.1615663298511 233.23328409830899 L 317 187.5 A 0 0 0 1 0 317 187.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#50b432" d="M 235.11587397258845 233.15142281163844 A 93.75 93.75 0 0 1 236.13114952386735 140.07330369223575 L 317 187.5 A 0 0 0 0 0 317 187.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path><path fill="#ed561b" d="M 236.17861664669255 139.99245856858394 A 93.75 93.75 0 0 1 316.8697831308058 93.75009043435307 L 317 187.5 A 0 0 0 0 0 317 187.5 Z" stroke="#FFFFFF" stroke-width="1" stroke-linejoin="round" transform="translate(0,0)"></path></g><g class="highcharts-markers" visibility="visible" zIndex="0.1" transform="translate(10,10) scale(1 1)"></g></g><g class="highcharts-data-labels highcharts-tracker" visibility="visible" zIndex="6" transform="translate(10,10) scale(1 1)" opacity="1" style="cursor:pointer;"><path fill="none" d="M 428.70398736151674 250.1763239282049 C 423.70398736151674 250.1763239282049 416.8059518149136 246.12452116920986 407.32115293833436 240.55329237559164 L 397.8363540617551 234.98206358197342" stroke-width="1" stroke="#000000"></path><path fill="none" d="M 188.25781711967068 186.1090736859439 C 193.25781711967068 186.1090736859439 201.25731177052023 186.19899215473137 212.2566169154384 186.32263004931414 L 223.25592206035657 186.4462679438969" stroke-width="1" stroke="#000000"></path><path fill="none" d="M 250.5269676448093 80.09828310004688 C 255.5269676448093 80.09828310004688 259.5009818576701 87.04142439458931 264.96525140035374 96.58824367458514 L 270.42952094303735 106.13506295458097" stroke-width="1" stroke="#000000"></path><g zIndex="1" style="cursor:pointer;" transform="translate(434,240)"><text x="3" zIndex="1" style="font-size:11px;color:#000000;fill:#000000;" y="15"><tspan>其它: 66.9 %</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(105,176)"><text x="3" zIndex="1" style="font-size:11px;color:#000000;fill:#000000;" y="15"><tspan>自来客: 16.5 %</tspan></text></g><g zIndex="1" style="cursor:pointer;" transform="translate(145,70)"><text x="3" zIndex="1" style="font-size:11px;color:#000000;fill:#000000;" y="15"><tspan>熟客及推荐: 16.5 %</tspan></text></g></g><g class="highcharts-legend" zIndex="7"><g zIndex="1"><g></g></g></g><g class="highcharts-tooltip" zIndex="8" style="cursor:default;padding:0;white-space:nowrap;" transform="translate(0,-9999)"><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" stroke-width="5" isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" stroke-width="3" isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" transform="translate(1, 1)"></path><path fill="none" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" stroke-width="1" isShadow="true" stroke="black" stroke-opacity="0.15" transform="translate(1, 1)"></path><path fill="rgba(249, 249, 249, .85)" d="M 3 0 L 13 0 C 16 0 16 0 16 3 L 16 13 C 16 16 16 16 13 16 L 3 16 C 0 16 0 16 0 13 L 0 3 C 0 0 0 0 3 0" stroke-width="1"></path><text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21"></text></g></svg></div></div>
+	                            </div>
+	                            <div class="col-1 col-4 col-last">
+	                                <ul class="list">
+	                                    <li>
+	                                        <div class="icon" style="background-color:#058dc7;"></div>
+	                                        <div class="name">其它<span class="light ml10">66.9%</span></div>
+	                                        	                                        <div class="counts">4间</div>
+	                                        <div class="total">¥1496</div>
+	                                    </li><li>
+	                                        <div class="icon" style="background-color:#50b432;"></div>
+	                                        <div class="name">自来客<span class="light ml10">16.5%</span></div>
+	                                        	                                        <div class="counts">3间</div>
+	                                        <div class="total">¥370</div>
+	                                    </li><li>
+	                                        <div class="icon" style="background-color:#ed561b;"></div>
+	                                        <div class="name">熟客及推荐<span class="light ml10">16.5%</span></div>
+	                                        	                                        <div class="counts">1间</div>
+	                                        <div class="total">¥370</div>
+	                                    </li>	                                </ul>
+	                            </div>
+	                        </div>
+	                    </div>	                <a href="javascript:void(0)" id="orderform_toggle" tag="orderform_toggle" class="table-expand">订单来源明细<i class="arrow" tag="orderform_i"></i></a>                    <!--图表结束-->
+	                <div class="chart-box" id="orderform_toshow" tag="orderform_toshow" style="display:none;">
+                        <div class="chart-box-header clx">
+                            <h2>订单来源明细</h2>
+                            <ul id="channelfilter" class="tab clx">
+                                <li code="other" tag="filter" class="$value[&#39;class&#39;] on"><a tag="filter" code="other" href="http://v.yunzhanggui.net/Report/reportchannel/#?">其它</a></li><li code="familiar" tag="filter" class="$value[&#39;class&#39;]"><a tag="filter" code="familiar" href="http://v.yunzhanggui.net/Report/reportchannel/#?">熟客及推荐</a></li><li code="self" tag="filter" class="$value[&#39;class&#39;]"><a tag="filter" code="self" href="http://v.yunzhanggui.net/Report/reportchannel/#?">自来客</a></li>                                                            </ul>
+                            <ul class="mode clx" style="display:none;">
+                                <li class="first on"><a href="http://v.yunzhanggui.net/Report/reportchannel/#?">日</a></li>
+                                <li><a href="http://v.yunzhanggui.net/Report/reportchannel/#?">周</a></li>
+                                <li><a href="http://v.yunzhanggui.net/Report/reportchannel/#?">月</a></li>
+                            </ul>
+                        </div>
+                        <div class="chart-box-content clx">
+                            <div id="loading" class="loading" style="display: none;"><i class="loading32"></i></div>
+                            <div class="mt20 mr20 clx"><a href="http://v.yunzhanggui.net/ReportSource/reportchannelexport?innid=287&amp;fromdate=2015-12-01&amp;enddate=2015-12-17" class="fr btn btn-primary btn-small">导出明细表格</a></div>
+                            <div class="table-wrap m20">
+                                <table id="detaillist" class="table table-bordered table-analytics" style="display: table;">
+                                    <tbody>
+                                    <tr tag="head">
+                                        <th>日期</th>
+                                        <th>房间号</th>
+                                        <th>入住人姓名</th>
+                                        <th>订单来源</th>
+                                        <th>订单金额</th>
+                                        <th>每日合计</th>
+                                    </tr>
+                                    <tr tag="tmpl" style="display:none;">
+                                        <td tag="date" rowspan="1"></td>
+                                        <td tag="roomname"></td>
+                                        <td tag="name"></td>
+                                        <td tag="channel"></td>
+                                        <td tag="totalprice"></td>
+                                        <td tag="datetotal" rowspan="1"></td>
+                                    </tr>
+									
+                                    <tr tag="item" style="display: table-row;">
+                                        <td tag="date" rowspan="1">12/12</td>
+                                        <td tag="roomname">调笑令</td>
+                                        <td tag="name">田浩</td>
+                                        <td tag="channel">其它</td>
+                                        <td tag="totalprice">￥374.0</td>
+                                        <td tag="datetotal" rowspan="1">￥374.0</td>
+                                    </tr><tr tag="item" style="display: table-row;">
+                                        <td tag="date" rowspan="1">12/13</td>
+                                        <td tag="roomname">调笑令</td>
+                                        <td tag="name">田浩</td>
+                                        <td tag="channel">其它</td>
+                                        <td tag="totalprice">￥374.0</td>
+                                        <td tag="datetotal" rowspan="1">￥374.0</td>
+                                    </tr><tr tag="item" style="display: table-row;">
+                                        <td tag="date" rowspan="1">12/14</td>
+                                        <td tag="roomname">调笑令</td>
+                                        <td tag="name">田浩</td>
+                                        <td tag="channel">其它</td>
+                                        <td tag="totalprice">￥374.0</td>
+                                        <td tag="datetotal" rowspan="1">￥374.0</td>
+                                    </tr><tr tag="item" style="display: table-row;">
+                                        <td tag="date" rowspan="1">12/15</td>
+                                        <td tag="roomname">调笑令</td>
+                                        <td tag="name">田浩</td>
+                                        <td tag="channel">其它</td>
+                                        <td tag="totalprice">￥374.0</td>
+                                        <td tag="datetotal" rowspan="1">￥374.0</td>
+                                    </tr><tr tag="total">
+                                        <td>总计</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td tag="total">￥1496.0</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+	                                </div>
+            </div>
+            <!--end Main content-->
+            <input type="hidden" id="_hidden" value="$cookiekey">
+            <div class="clear"></div>
+        </div>
+        <!--end main container-->
+    </div>
+
+    <!--记一笔 开始-->
+<div class="modal sm fade" style="display:none;">
+  <div class="modal-header">
+    <a href="http://v.yunzhanggui.net/Report/reportchannel/#?" class="close" tag="closebtn" title="关闭">×</a>
+    <h4>记一笔</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+    <div class="mt10">
+      <ul class="cntlist">
+        <li class="over" tag="menus">
+          <label><input type="radio" name="record" tag="tab_income" value="tab_income" checked="checked">收入</label>
+          <label style="margin-left:110px;"><input type="radio" tag="tab_pay" value="tab_pay" name="record">支出</label>
+        </li>
+        <li class="over">
+          <span class="label-input fl" tag="datetip">收入日期</span>
+          <input type="text" id="addrecodedates" class="fl" style="width:86px; margin-right:-1px;" value="2013-07-01">
+          <div class="droplist" style="width:183px;" t="innlist">
+            <span class="value">丽江风之谷客栈</span>
+            <div class="ip-dropdown" style="display:none; width:209px; z-index: 1000;">
+              <div class="maxheight">
+               
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="over" tag="typelist">
+          <div class="droplist fl" style="width:83px;" t="consumelist">
+            <span class="value">选择收入项目</span>
+            <div class="ip-dropdown" style="display:none; width:109px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;" class="on">烟酒糖茶</a></div>
+                <div><a href="javascript:;">摄影拍照</a></div>
+              </div>
+            </div>
+          </div>
+          <input class="fl" style="width:136px; margin:0 -1px;" name="money" type="text" value="" setplaceholder="" placeholder="金额">
+          <input class="fl" id="recodesum_hidedata" type="hidden" value="">
+          <div class="droplist fl" style="width:87px;" t="paytypelist">
+            <span class="value">选择支付方式</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;">现金</a></div>
+                <div><a href="javascript:;">POS刷卡</a></div>
+                <div><a href="javascript:;">支付宝</a></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="over"><textarea name="remark" style="width:356px; height:40px " setplaceholder="" placeholder="备注，如：201客人肖万凯买13号普洱茶饼一个。"></textarea></li>
+        <li class="over"><a class="btn btn-primary" href="http://v.yunzhanggui.net/Report/reportchannel/#?" tag="addsave">保存</a></li>
+      </ul>
+    </div>
+    </form>
+  </div>
+</div>
+<div id="consumecashierform" class="modal cashier fade" style="display:none">
+  <div class="modal-header"><a href="javascript:;" tag="closebtn" class="close" title="关闭">×</a>
+    <h3>云掌柜收银台</h3>
+  </div>
+  <div class="modal-body">
+    <div class="yzg-cashier-info" tag="info">
+      <div class="clx">
+        <span class="fl">需收款：</span>
+        <span class="fr t16" tag="totalprice">¥500</span>
+      </div>
+      <div class="clx">
+        <span class="fl">描述：</span>
+        <span class="fr tr" tag="desc">其他消费</span>
+      </div>
+    </div>
+    <div class="yzg-cashier-step" tag="pay">
+      <div class="yzg-cashier-tab clx" tag="paytypelist">
+        <ul class="clx">
+          <li class="checked" tag="qrcode"><input type="checkbox" checked="checked" style="display:none;"><i class="ico-checkbox" tag="qrcode"></i>扫码支付</li>
+        </ul>
+        <ul class="clx">
+          <li tag="msg"><input type="checkbox" checked="checked" style="display:none;"><i class="ico-checkbox" tag="msg"></i>短信支付</li>
+        </ul>
+      </div>
+      <input type="hidden" id="consumehiddedata">
+      <!-- 扫码支付 -->
+      <div tag="qrcode" style="display:none;">
+        <div class="qrcode tc">
+                   <img tag="qrcode" src="" width="210" height="210" alt="">
+          <div class="desc">请客人打开微信<br>扫描二维码以完成支付，在支付完成前请勿关闭该窗口。</div>
+        </div>
+      </div>
+      <!-- 短信 -->
+      <div class="text" tag="msg" style="display:none;">
+        <p class="mt10 mb10">请将以下收款短信发送到客人手机上，以完成收款：</p>
+        <div class="template" tag="msgdesc"><span></span><a href="http://wx.miot.cn/kz/201407233283" target="_blank">http://wx.miot.cn/kz/201407233283</a></div>
+        <div class="mt10">
+          <input type="text" name="phone" value="" style="width:100px;">
+          <a href="http://v.yunzhanggui.net/Report/reportchannel/#?" class="btn btn-primary btn-small" style="padding:2px 8px;" tag="sendmsg">立即发送</a>
+        </div>
+      </div>
+      <!-- POS机 -->
+      <div class="mt20" style="display:none;" tag="pos">
+       <p class=" t14">请<span class="red t14">开启手机蓝牙</span>和云掌柜手机客户端，进入云掌柜收银台，通过云掌柜POS机刷卡（<span class="red t14">支持国内大陆信用卡和借记卡）。</span></p>
+      </div>
+    </div>
+    <div class="yzg-cashier-result" tag="payresult">
+            <div style="display:none" tag="success">
+                <p class="title green">支付成功！</p>
+                <p>客人已通过<span tag="gateway">微信</span>成功支付<span tag="totalprice">500</span>元，您可进入统计--云掌柜收银台查看收款详情。</p>
+            </div>
+            <div style="display:none" tag="fail">
+                <p class="title red">支付失败！</p>
+                <p>由于某种原因，客人未能成功支付<span tag="totalprice">500</span>元房费，请改用其它方式收取该笔费用，或通过修改订单，重新补交房费。</p>
+            </div>
+        </div>
+  </div>
+</div>
+<!--记录收入 结束-->
+<div id="recodesumform" class="modal large fade in" style="display:none;">
+  <div class="modal-header">
+    <a href="javascript:;" tag="closebtn" class="close" title="关闭">×</a>
+    <h4>记一笔</h4>
+  </div>
+  <div class="modal-body clx" style="overflow: visible; max-height: 500px;">
+    <form>
+    <div>
+      <ul class="cntlist" id="recodelist">
+        <li class="over" tag="r" t="recode" i="1">
+          <div class="droplist fl" style="width:123px;" t="innlist">
+            <span class="value">丽江风之谷客栈</span>
+            <div class="ip-dropdown" style="display:none; width:209px; z-index: 1000;">
+              <div tag="innlist" class="maxheight" style="max-height:120px;">
+              </div>
+            </div>
+          </div>
+          <div class="droplist fl" style="width:33px; margin:0 -1px;" t="typelist">
+            <span class="value">收入</span>
+            <div class="ip-dropdown" style="display:none; width:58px; z-index: 1000;" value="income">
+              <div tag="typelist">
+                <div value="income"><a href="javascript:;" class="on">收入</a></div>
+                <div value="pay"><a href="javascript:;">支出</a></div>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="fl" style="width:120px; margin-right:-1px;" name="addrecodedate" value="">
+          <div class="droplist fl" t="consumelist" style="width:72px;">
+            <span class="value">项目</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;" class="on">烟酒糖茶</a></div>
+                <div><a href="javascript:;">摄影拍照</a></div>
+              </div>
+            </div>
+          </div>
+          <input class="fl" name="amount" style="width:66px; margin:0 -1px;" type="text" value="" setplaceholder="" placeholder="金额">
+          <div class="droplist fl" style="width:67px;" t="paytypelist">
+            <span class="value">支付方式</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="paytypelist">
+              </div>
+            </div>
+          </div>
+          <textarea name="remark" style="width:600px; height:20px; padding:10px 5px; resize:none;" setplaceholder="" placeholder="备注，如：201客人肖万凯买13号普洱茶饼一个。"></textarea>
+          <a href="javascript:;" class="del-book ml5 mt5" title="删除该记录" style="display:none;" tag="del"></a>
+          <a href="javascript:;" class="add-book ml5 mt5" title="添加记录" tag="add"></a>
+        </li>
+      </ul>
+    </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="tc"><a class="btn btn-primary" tag="saverecode" href="javascript:;">保存</a></div>
+  </div>
+</div>
+<!--记录收入 结束-->
+<!--下拉菜单弹窗 开始-->
+<div class="ip-dropdown" style="display:none;" id="recodetypelist">
+  <ul>
+  <!--  <li><a href="javascript:;">烟酒糖茶</a></li>
+    <li><a href="javascript:;">旅游摄影</a></li>
+    <li><a href="javascript:;">休闲娱乐</a></li>
+    <li><a href="javascript:;">餐饮美食</a></li>
+    <li><a href="javascript:;">其他杂项</a></li>-->
+  </ul>
+</div>
+<!--下拉菜单弹窗 结束-->
+
+    <!-- footer start -->
+<script type="text/javascript" src="../js/jsmin/jquery1.8.2.min.js"></script>
+<script type='text/javascript' src="../js/jsmin/miot.js?ts=53780"></script>
+<script type='text/javascript' src="../js/jsmin/jquery-ui.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/jquery-ui-timepicker-addon.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/m.jquery.ui.sortable.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/datepicker.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/calendarholiday.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/datepickertransform.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/index.js?ts=53780"></script>
+<script type="text/javascript" src="../js/jsmin/datepickeraction.js?ts=53780"></script>
+<!-- footer end -->
+
+</body>
+</html>
+
+
+
+<script type='text/javascript' src="../js/report/recodesum.js?ts=53780"></script>
+<script type="text/javascript" src="../js/report/order.js?ts=53780"></script>
+<script type="text/javascript" src="../js/report/new.js?ts=53780"></script>
+<script type="text/javascript" src="../js/report/reportchannel.js?ts=53780"></script>
+<script type='text/javascript' src="../js/report/checkinguest.js?ts=53780"></script>
+<script type='text/javascript' src="../js/report/highchart.js?ts=53780"></script>
+<script type='text/javascript' src="../js/report/reportheaderform.js?ts=53780"></script>
+<script type='text/javascript' src="../js/report/reportincome.js?ts=53780"></script>
+<script type='text/javascript' src="../js/report/reportincomechart.js?ts=53780"></script>
+<script type="text/javascript">
+	var reportdata={"report":{"other":{"sales":1496,"nights":"4","name":"\u5176\u5b83","channelcode":"other","rate":66.9,"color":"#058dc7"},"self":{"sales":370,"nights":"3","name":"\u81ea\u6765\u5ba2","channelcode":"self","rate":16.5,"color":"#50b432"},"familiar":{"sales":370,"nights":"1","name":"\u719f\u5ba2\u53ca\u63a8\u8350","channelcode":"familiar","rate":16.5,"color":"#ed561b"}},"graph":["#058dc7","#50b432","#ed561b"]};
+</script>
+
+<script type="text/javascript">
+	window.onload=function(){
+			};
+</script>
+<div style="display:none">
+    <script src="./z_stat.php" language="JavaScript" async="async"></script>
+</div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>

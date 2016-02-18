@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://v.yunzhanggui.net/ShortMessage/contacts/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+                                                <title>常用联系人 - 云掌柜</title>                                <meta name="Keywords" content="">
+<meta name="Description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<link rel="shortcut icon" href="http://v.yunzhanggui.net/favicon.ico">
+<link href="../css/miot.css" rel="stylesheet" type="text/css">
+<link href="../css/inn.css" rel="stylesheet" type="text/css">
+<link href="../css/Calendar.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    
+<!--Home searchbox-->
+<div class="content">
+    <div class="main">
+    	<!--Header-->
+	    <!--Header-->
+<div id="header">
+    <div class="inn-name">
+      <h2>翰院壹号客栈</h2>
+        <p><span class="user">测试</span><span tag="regards">，</span>&nbsp;&nbsp;<a href="http://v.yunzhanggui.net/Logout/">退出</a></p>
+    </div>
+    <div class="logo"><a href="http://v.yunzhanggui.net/"><span class="logo_big"></span></a></div>
+
+    <div id="sub-nav">
+        <a href="../index.html" >房态</a><a href="../Report/reportincome.html">统计</a><a href="../Crm/checkinguest.html" class="active">客人</a>   <div class="daybook" title="记一笔" ga="a" gname="顶部_记一笔" id="men_recodesum"></div>
+    </div>
+  </div>
+
+<!--end Header-->
+ 		<!--end Header-->
+        <div class="clear"></div>
+        
+        <!--main container-->
+        <div id="main-container">
+        
+        	<!--Left Navegation-->
+	        <!--Left Navegation-->
+<div class="sidebar">
+	<ul>
+		<li ><a href="../Crm/checkinguest.html">住店客人</a></li>				<li><a href="../ShortMessage/automessagetpl.html">短信服务</a></li>		<li class="on"><a href="../ShortMessage/contacts.html">常用联系人</a></li>	</ul>
+	 <div class="p10 pt20"></div>
+		<div id="leftmsgdesc" class="pl10"></div>
+		<div class="p10 tc">短信内容请遵循<br><a href="javascript:;" id="sendrole" class="underline">短信内容条款</a></div></div>
+<!--end Left Navegation-->
+            <!--end Left Navegation-->
+            
+            <!--Main content-->
+            <div class="main-content ">
+              <!--子帐号信息-->
+                <div class="page-cnt">
+                    
+                    <div class="cntbox">
+                      <div class="t14 mb10 clx">
+                        <div class="fl">
+                          <a href="javascript:;" id="addcontact" class="btn btn-primary btn-small">+添加联系人</a>
+                          <!--<a href="#?" class="btn btn-primary btn-small ml10">导出Excel</a>-->
+                        </div>
+                        <form action="http://v.yunzhanggui.net/ShortMessage/contacts" id="submform" method="get" style="display:none;">
+                             <input type="hidden" value="2" name="p" id="hidden_page">
+                        </form>
+                      </div>
+                      <!--联系人列表-->
+                     <div>
+                        <table class="table table-bordered table-striped">
+                          <tbody id="contactlist">
+                            <tr tag="head">
+                              <th width="100">姓名</th>
+                              <th width="100">手机号</th>
+                              <th>备注</th>
+                              <th width="160">操作</th>
+                            </tr>
+                                                      </tbody>
+                        </table>
+                        <div class="paging tc">
+	                        <ul id="pagelist">
+	                        <li><a p="" tag="page" href="javascript:void(0);">«</a></li>
+	                        	                        	                        <li><a href="javascript:void(0);" tag="page" p="0">»</a></li>
+	                        </ul>
+                        </div>
+                      </div>
+	                                        <!--end of 联系人列表-->
+                      
+                  </div>
+                    </div>
+              </div>
+              <!--end子帐号信息-->
+                
+            </div>
+            <!--end Main content-->
+            
+            <div class="clear"></div>
+        </div>
+        <!--end main container-->
+        
+        
+    </div>
+
+<!--//Home searchbox-->
+
+
+<!--弹出框-->
+<!--添加联系人模板-->
+添加联系人模板
+<div id="contactform" class="bootbox modal view fade" style="display: none;">
+  <div class="modal-header"><a href="javascript:;" tag="closebtn" class="close" title="关闭">×</a>
+    <h4>添加联系人</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div>
+        <ul class="cntlist">
+            <li class="over"><tt class="lab">姓名：</tt><input setplaceholder="" type="text" id="username" name="name" style="width:300px" value="" placeholder="请输入"></li>
+            <li class="over"><tt class="lab">手机号：</tt><input setplaceholder="" type="text" id="usermobile" name="mobile" maxlength="11" style="width:300px" value="" placeholder="请输入"></li>
+            <li class="over"><tt class="lab">备注：</tt><textarea setplaceholder="" name="remark" id="remark" style="width: 300px; height:120px " placeholder="请输入备注内容，最多180字"></textarea></li>
+            <li class="over"><tt class="lab">&nbsp;</tt><a class="btn btn-primary" href="javascript:;" id="button_click" tag="addsave">确认添加</a></li>
+        </ul>
+      </div>
+       <input type="hidden" id="tpl_hidden">
+    </form>
+  </div>
+</div>
+
+<!--发送短信-->
+<div id="msgform" class="bootbox modal view fade" style="display:none">
+  <div class="modal-header"><a href="http://v.yunzhanggui.net/ShortMessage/contacts/#?" tag="closebtn" class="close" title="关闭">×</a>
+    <h4>发送短信给：王成城</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div>
+        <ul class="cntlist">
+            <li tag="phone" class="over"><tt class="lab">手机号：</tt><span tag="phone"></span>&nbsp;
+            <span tag="hisinfo" class="ico-note ml5" title=""></span>
+            </li>
+            <li tag="tmpl" class="over"><tt class="lab">选择模板：</tt>
+	            <select id="msgtpl" name="msgtmpl" style="width:174px">
+		            <option value="">选择短信模板</option>
+			            		            <option value="707">客栈信息</option><option value="708">天气预报</option><option value="709">到店问候</option><option value="710">客户回访</option>	            </select>
+	            <input type="hidden" tplid="707" value="xx客栈客栈位置：丽江市古城区康仲路康仲村88号；电话：(0888)51199999；公交路线：从丽江火车站乘坐16路车在康仲村路下车。[xx客栈静候您的光临]"><input type="hidden" tplid="708" value="[丽江天气]8月30日有小到中雨，气温14~20℃，东北风3~4级，请备好雨具以免影响您的出行。[xx客栈]"><input type="hidden" tplid="709" value="欢迎入住xx客栈！客栈前厅已经为您准备好了免费咖啡和读物；休息一下，缓解旅途的疲惫。"><input type="hidden" tplid="710" value="感谢亲入住xx客栈，给小店全5分好评可得淘宝30元店铺券哦；希望这次旅行给您带来深刻印象。">          	</li>
+          	<li class="over t12">
+          		<tt class="lab">&nbsp;</tt>&nbsp;短信永久免费，最多130字，已输入<b id="leftwords" val="130" class="remtxt">$tplcontent_maxlen</b>字
+          	</li>
+            <li tag="msg" class="over"><tt class="lab">短信内容：</tt>
+            	<textarea id="msg" maxlength="130" setplaceholder="" style="width: 300px; height:120px " placeholder="请输入短信内容"></textarea>
+            </li>
+            <li tag="save" class="over">
+            	<tt class="lab">&nbsp;</tt>
+            	<input type="hidden" id="msg_hidden" innid="287">
+            	<a tag="send" text="发送" tempclass="btn btn-primary" class="btn btn-primary" href="http://v.yunzhanggui.net/ShortMessage/contacts/#?">发送</a>
+            	<span class="pl20">请遵守<a href="http://v.yunzhanggui.net/ShortMessage/contacts/#?" tag="msgrole" class="underline">短信内容条款</a></span>
+            </li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</div>
+<!--发送短信-->
+	<!--短信内容条款-->
+	<div id="msgrole" class="bootbox modal view fade" style="display:none">
+		<div class="modal-header"><a href="javascript:;" class="close" tag="closebtn" title="关闭">×</a>
+			<h4>短信内容条款</h4>
+		</div>
+		<div class="modal-body">
+			<div class="t14" style="line-height:2em">
+				不利用短信平台制作、复制、发布、传播含有下列内容的信息：<br>
+				1、反对宪法所确定的基本原则的；<br>
+				2、危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；<br>
+				3、损坏国家荣誉和利益的；<br>
+				4、煽动民族仇恨、民族歧视，破坏民族团结的；<br>
+				5、破坏国家民族宗教政策，宣扬邪教和封建迷信的；<br>
+				6、散布谣言，扰乱社会秩序，破坏社会稳定的；<br>
+				7、散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；<br>
+				8、侮辱或者诽谤他人，侵害他人合法权益的；<br>
+				9、含有法律、行政法规禁止的其他内容的；<br>
+			</div>
+		</div>
+	</div>
+
+    <!--记一笔 开始-->
+<div class="modal sm fade" style="display:none;">
+  <div class="modal-header">
+    <a href="http://v.yunzhanggui.net/ShortMessage/contacts/#?" class="close" tag="closebtn" title="关闭">×</a>
+    <h4>记一笔</h4>
+  </div>
+  <div class="modal-body">
+    <form>
+    <div class="mt10">
+      <ul class="cntlist">
+        <li class="over" tag="menus">
+          <label><input type="radio" name="record" tag="tab_income" value="tab_income" checked="checked">收入</label>
+          <label style="margin-left:110px;"><input type="radio" tag="tab_pay" value="tab_pay" name="record">支出</label>
+        </li>
+        <li class="over">
+          <span class="label-input fl" tag="datetip">收入日期</span>
+          <input type="text" id="addrecodedates" class="fl" style="width:86px; margin-right:-1px;" value="2013-07-01">
+          <div class="droplist" style="width:183px;" t="innlist">
+            <span class="value">丽江风之谷客栈</span>
+            <div class="ip-dropdown" style="display:none; width:209px; z-index: 1000;">
+              <div class="maxheight">
+               
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="over" tag="typelist">
+          <div class="droplist fl" style="width:83px;" t="consumelist">
+            <span class="value">选择收入项目</span>
+            <div class="ip-dropdown" style="display:none; width:109px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;" class="on">烟酒糖茶</a></div>
+                <div><a href="javascript:;">摄影拍照</a></div>
+              </div>
+            </div>
+          </div>
+          <input class="fl" style="width:136px; margin:0 -1px;" name="money" type="text" value="" setplaceholder="" placeholder="金额">
+          <input class="fl" id="recodesum_hidedata" type="hidden" value="">
+          <div class="droplist fl" style="width:87px;" t="paytypelist">
+            <span class="value">选择支付方式</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;">现金</a></div>
+                <div><a href="javascript:;">POS刷卡</a></div>
+                <div><a href="javascript:;">支付宝</a></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="over"><textarea name="remark" style="width:356px; height:40px " setplaceholder="" placeholder="备注，如：201客人肖万凯买13号普洱茶饼一个。"></textarea></li>
+        <li class="over"><a class="btn btn-primary" href="http://v.yunzhanggui.net/ShortMessage/contacts/#?" tag="addsave">保存</a></li>
+      </ul>
+    </div>
+    </form>
+  </div>
+</div>
+<div id="consumecashierform" class="modal cashier fade" style="display:none">
+  <div class="modal-header"><a href="javascript:;" tag="closebtn" class="close" title="关闭">×</a>
+    <h3>云掌柜收银台</h3>
+  </div>
+  <div class="modal-body">
+    <div class="yzg-cashier-info" tag="info">
+      <div class="clx">
+        <span class="fl">需收款：</span>
+        <span class="fr t16" tag="totalprice">¥500</span>
+      </div>
+      <div class="clx">
+        <span class="fl">描述：</span>
+        <span class="fr tr" tag="desc">其他消费</span>
+      </div>
+    </div>
+    <div class="yzg-cashier-step" tag="pay">
+      <div class="yzg-cashier-tab clx" tag="paytypelist">
+        <ul class="clx">
+          <li class="checked" tag="qrcode"><input type="checkbox" checked="checked" style="display:none;"><i class="ico-checkbox" tag="qrcode"></i>扫码支付</li>
+        </ul>
+        <ul class="clx">
+          <li tag="msg"><input type="checkbox" checked="checked" style="display:none;"><i class="ico-checkbox" tag="msg"></i>短信支付</li>
+        </ul>
+      </div>
+      <input type="hidden" id="consumehiddedata">
+      <!-- 扫码支付 -->
+      <div tag="qrcode" style="display:none;">
+        <div class="qrcode tc">
+                   <img tag="qrcode" src="" width="210" height="210" alt="">
+          <div class="desc">请客人打开微信<br>扫描二维码以完成支付，在支付完成前请勿关闭该窗口。</div>
+        </div>
+      </div>
+      <!-- 短信 -->
+      <div class="text" tag="msg" style="display:none;">
+        <p class="mt10 mb10">请将以下收款短信发送到客人手机上，以完成收款：</p>
+        <div class="template" tag="msgdesc"><span></span><a href="http://wx.miot.cn/kz/201407233283" target="_blank">http://wx.miot.cn/kz/201407233283</a></div>
+        <div class="mt10">
+          <input type="text" name="phone" value="" style="width:100px;">
+          <a href="http://v.yunzhanggui.net/ShortMessage/contacts/#?" class="btn btn-primary btn-small" style="padding:2px 8px;" tag="sendmsg">立即发送</a>
+        </div>
+      </div>
+      <!-- POS机 -->
+      <div class="mt20" style="display:none;" tag="pos">
+       <p class=" t14">请<span class="red t14">开启手机蓝牙</span>和云掌柜手机客户端，进入云掌柜收银台，通过云掌柜POS机刷卡（<span class="red t14">支持国内大陆信用卡和借记卡）。</span></p>
+      </div>
+    </div>
+    <div class="yzg-cashier-result" tag="payresult">
+            <div style="display:none" tag="success">
+                <p class="title green">支付成功！</p>
+                <p>客人已通过<span tag="gateway">微信</span>成功支付<span tag="totalprice">500</span>元，您可进入统计--云掌柜收银台查看收款详情。</p>
+            </div>
+            <div style="display:none" tag="fail">
+                <p class="title red">支付失败！</p>
+                <p>由于某种原因，客人未能成功支付<span tag="totalprice">500</span>元房费，请改用其它方式收取该笔费用，或通过修改订单，重新补交房费。</p>
+            </div>
+        </div>
+  </div>
+</div>
+<!--记录收入 结束-->
+<div id="recodesumform" class="modal large fade in" style="display:none;">
+  <div class="modal-header">
+    <a href="javascript:;" tag="closebtn" class="close" title="关闭">×</a>
+    <h4>记一笔</h4>
+  </div>
+  <div class="modal-body clx" style="overflow: visible; max-height: 500px;">
+    <form>
+    <div>
+      <ul class="cntlist" id="recodelist">
+        <li class="over" tag="r" t="recode" i="1">
+          <div class="droplist fl" style="width:123px;" t="innlist">
+            <span class="value">丽江风之谷客栈</span>
+            <div class="ip-dropdown" style="display:none; width:209px; z-index: 1000;">
+              <div tag="innlist" class="maxheight" style="max-height:120px;">
+              </div>
+            </div>
+          </div>
+          <div class="droplist fl" style="width:33px; margin:0 -1px;" t="typelist">
+            <span class="value">收入</span>
+            <div class="ip-dropdown" style="display:none; width:58px; z-index: 1000;" value="income">
+              <div tag="typelist">
+                <div value="income"><a href="javascript:;" class="on">收入</a></div>
+                <div value="pay"><a href="javascript:;">支出</a></div>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="fl" style="width:120px; margin-right:-1px;" name="addrecodedate" value="">
+          <div class="droplist fl" t="consumelist" style="width:72px;">
+            <span class="value">项目</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="list">
+                <div><a href="javascript:;" class="on">烟酒糖茶</a></div>
+                <div><a href="javascript:;">摄影拍照</a></div>
+              </div>
+            </div>
+          </div>
+          <input class="fl" name="amount" style="width:66px; margin:0 -1px;" type="text" value="" setplaceholder="" placeholder="金额">
+          <div class="droplist fl" style="width:67px;" t="paytypelist">
+            <span class="value">支付方式</span>
+            <div class="ip-dropdown" style="display:none; width:112px; z-index: 1000;">
+              <div class="maxheight" style="max-height:120px;" tag="paytypelist">
+              </div>
+            </div>
+          </div>
+          <textarea name="remark" style="width:600px; height:20px; padding:10px 5px; resize:none;" setplaceholder="" placeholder="备注，如：201客人肖万凯买13号普洱茶饼一个。"></textarea>
+          <a href="javascript:;" class="del-book ml5 mt5" title="删除该记录" style="display:none;" tag="del"></a>
+          <a href="javascript:;" class="add-book ml5 mt5" title="添加记录" tag="add"></a>
+        </li>
+      </ul>
+    </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="tc"><a class="btn btn-primary" tag="saverecode" href="javascript:;">保存</a></div>
+  </div>
+</div>
+<!--记录收入 结束-->
+<!--下拉菜单弹窗 开始-->
+<div class="ip-dropdown" style="display:none;" id="recodetypelist">
+  <ul>
+  <!--  <li><a href="javascript:;">烟酒糖茶</a></li>
+    <li><a href="javascript:;">旅游摄影</a></li>
+    <li><a href="javascript:;">休闲娱乐</a></li>
+    <li><a href="javascript:;">餐饮美食</a></li>
+    <li><a href="javascript:;">其他杂项</a></li>-->
+  </ul>
+</div>
+<!--下拉菜单弹窗 结束-->
+
+    <!-- footer start -->
+<script type="text/javascript" src="../js/jsmin/jquery1.8.2.min.js"></script>
+<script type="text/javascript" src="../js/jsmin/miot.js"></script>
+<script type="text/javascript" src="../js/jsmin/jquery-ui.js"></script>
+<script type="text/javascript" src="../js/report/recodesum.js"></script>
+<script type="text/javascript" src="../js/jsmin/jquery-ui-timepicker-addon.js"></script>
+<!-- footer end -->
+
+
+
+
+<script type="text/javascript" src="../js/report/crm_contacts.js"></script>
+
+<script type="text/javascript">
+	window.onload=function(){
+			};
+</script>
+<div style="display:none">
+    <script src="../z_stat.php" language="JavaScript" async="async"></script>
+</div></body></html>
