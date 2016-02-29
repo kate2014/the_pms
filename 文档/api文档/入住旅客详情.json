@@ -1,0 +1,59 @@
+----------------------------------
+请求地址
+${service_home}/guestdetail
+
+--------------请求信息-------------
+{
+    "accesstoken": "xxxxxx",
+    "data": {
+        "hotelId":"1",                         //客栈ID
+        "guestId":"1"                           //客户ID      
+    }
+   
+}
+
+--------------响应信息-------------
+{
+	"code": 0,
+	"msg": "",
+	"data": {						
+		"id": "13743640",                                       //客户ID
+        "address": "",                                          //地址
+        "nation": "",                                           //国家
+        "sex": "0",                                             //性别
+        "name": "蔡总",
+        "phone": "18628108610",
+        "idType": 0,                                            //证件类型 0 身份证 1 护照 2 军官证 3港澳通行证 4其他
+        "idNum": "",                                            //证件号码                  
+        "remark": null,                                         //备注
+        "isMain": "1",                                          //是否主要责任人， 0 否 1 是，默认为1             
+        "cityName": "成都",
+        "idTypeName": "身份证"                                  //身份证件类型名称
+        "dateList":[											//住店记录
+        	{
+        		"checkInDate":"2016-02-20",
+        		"list":[										//相当于order Items 的概要
+        			{
+	                    "guestName": "蔡总",					//客户名称
+	                    "phone": "18628108610",					//电话
+	                    "idNum": "",							//身份证号
+	                    "cityName": "南宁",						//客人城市
+	                    "nights": "1",							//入住天数
+	                    "typeName": "翰院房",					//房间类型
+	                    "roomName": "秋波媚",					//房间名称
+	                    "totalPrice": 320						//总价
+        			},{
+	                    "guestName": "张三",					//客户名称
+	                    "phone": "18628108610",
+	                    "idNum": "",
+	                    "cityName": "南宁",
+	                    "nights": "1",
+	                    "typeName": "翰院房",					//房间类型
+	                    "roomName": "呵呵房",					//房间名称
+	                    "totalPrice": 320						//总价
+        			}
+        		]
+        	}
+        ]
+	}	
+}

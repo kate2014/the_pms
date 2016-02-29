@@ -1,0 +1,23 @@
+请求地址
+${service_home}/account/create
+
+--------------请求信息-------------
+{
+	"accesstoken": "xxxxxx",
+	"data":{
+		"id":"",						//当ID为空时新增
+		"account":"账户名",					
+		"password":"dfdfdfdfdf",			
+		"userGroup":"用户组",			
+		"phone":"13547698268",			
+		"hotelId":"1"					//所属客栈
+	}
+}
+
+
+--------------响应信息-------------
+{
+	"code": 0,
+	"msg": "",
+	"data": {}
+}

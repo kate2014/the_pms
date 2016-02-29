@@ -1,0 +1,58 @@
+----------------------------------
+请求地址
+${service_home}/checkout
+
+--------------请求信息-------------
+{
+    "accesstoken": "xxxxxx",
+    "data": {
+	    "roomId":"1",                                       //房间ID
+	    "orderId":"1",                                       //订单ID
+	    "payInfo":{
+	    	"payList": [                                            //付款信息
+	            {
+	                "payMethod":"0",                                    //付款方式 0 现金 1刷卡 2支付宝 3收银台
+	                "type": "0",                                        //付款类型: 0 收款 1押金 2退房费
+	                "amount": 888,                                      //金额
+	                "desc": "",                                         //描述
+	                "remark": null,                                     //备注
+	                "outTradeNo": ""                                    //外部交易流水号，如对接支付宝使用,暂时无用
+	            }
+	        ]
+	    }
+	}
+}
+
+--------------响应信息-------------
+//该相应格式与4.3获取房间状态信息一致,但是只写出一条roomStatus,前端用这一条对表格内容进行更新
+{
+	"code": 0,
+	"msg": "",
+	"data": {
+		"roomStatus":[
+			{
+				"orderId":"1",
+				"roomId":"1",
+				"roomName":"呵呵房",
+				"typeName":"花园套房",
+				"nights":3,
+				"roomTotalPrice":"1450",
+                "orgPrice":"300",
+				"createDate":"2016-02-20",
+				"checkInDate":"2016-02-20",
+				"guestName":"张三",
+				"phone":"136xxxxxx",
+				"channelCode":"0",
+				"channelName":"熟客及推介",
+				"remark":"JD5135 成都飞丽江 12：25 到 免费接 不收房费，刘刚过来付 客人看房后比较喜欢花园套房，给客人免费升级（小严）",
+				"payStatus":"1",
+				"needCar":"1",
+				"cityName":"成都",
+				"checkoutDate":"2016-02-23",
+				"payedMoney":"0",
+				"bookAllRoom":"0",
+				"orderItemStatus":"2"													//退房后标记为2										
+			}
+		]
+	}	
+}

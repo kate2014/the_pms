@@ -1,0 +1,91 @@
+----------------------------------
+请求地址
+${service_home}/reserve
+
+--------------请求信息-------------
+{
+    "accesstoken": "xxxxxx",
+    "data": {
+        "orderHeader":{													   //订单头
+        	"guestName":"张三",                                            //客户
+       		"phone":"136xxxxxx",                                           //电话
+        	"channelCode":"0",                                             //渠道编码
+        	"remark":"JD5135 成都飞丽江 12：25 到 免费接 不收房费，刘刚过来付 客人看房后比较喜欢花园套房，给客人免费升级（小严）",
+        	"orderItems":[
+        		{
+        			"checkInDate":"2016-02-19",								//入住时间
+        			"roomId":"1",
+        			"roomName":"花心动",
+        			"nights":"1",
+        			"roomTotalPrice":555
+        		},
+        		{
+        			"checkInDate":"2016-02-19",								//入住时间
+        			"roomId":"1",
+        			"roomName":"如梦令",
+        			"nights":"1",
+        			"roomTotalPrice":333
+        		}
+        	]
+        },
+        "payInfo":{
+        	"payList": [                                            //付款信息
+                {
+                    "orderId": "287",                                   
+                    "payMethod":"0",                                    //付款方式 0 现金 1刷卡 2支付宝 3收银台
+                    "payMethodName": "现金",                            //付款方式名称
+                    "type": "0",                                        //付款类型: 0 收款 1押金 2退房费
+                    "amount": 888,                                     //金额
+                    "desc": "",                                         //描述
+                    "remark": null,                                     //备注
+                    "outTradeNo": "",                                   //外部交易流水号，如对接支付宝使用,暂时无用
+                    "title": "预定时收款￥888[现金]",                  //操作概要
+                    "payPoint":"0",                                     //0 预定时、1 入住时、2 退房时
+                }
+            ]
+        },
+        "notifys":[														   //提醒
+        	{
+        		"type":"0",										           //0 车接 1车送 2 普通提醒
+        		"typeName":"车接",									       //提醒名称
+        		"notifyTime":"2016-02-20 10:33:00",						   //提醒时间
+        		"notifyDesc":"提醒内容，最多30字"						   
+        	}
+        ]
+    }
+}
+
+
+--------------响应信息-------------
+//该相应格式与4.3获取房间状态信息一致，只是相应新添加的几个房间的而不是按时间段获取的
+{
+	"code": 0,
+	"msg": "",
+	"data": {
+		"roomStatus":[
+			{
+				"orderId":"1",
+				"roomId":"1",
+				"roomName":"呵呵房",
+				"typeName":"花园套房",
+				"nights":3,
+				"roomTotalPrice":"1450",
+                "orgPrice":"300",
+				"createDate":"2016-02-20",
+				"checkInDate":"2016-02-20",
+				"guestName":"张三",
+				"phone":"136xxxxxx",
+				"channelCode":"0",
+				"channelName":"熟客及推介",
+				"remark":"JD5135 成都飞丽江 12：25 到 免费接 不收房费，刘刚过来付 客人看房后比较喜欢花园套房，给客人免费升级（小严）",
+				"payStatus":"1",
+				"needCar":"1",
+				"cityName":"成都",
+				"checkoutDate":"2016-02-23",
+				"payedMoney":"0",
+				"bookAllRoom":"0",
+				"orderItemStatus":"2"
+			}
+		]
+	}	
+}

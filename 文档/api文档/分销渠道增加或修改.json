@@ -1,0 +1,27 @@
+请求地址
+${service_home}/channel/create
+
+--------------请求信息-------------
+{
+	"accesstoken": "xxxxxx",
+	"data":{
+		"id":1,								//ID为空时新增
+		"channelName":"张三的酒瓶",			//渠道名称	
+		"channelCode":"ddd",				//分销渠道ID
+		"phone":"135xxx",					//电话
+		"email":"aa@qq.com",
+		"totalAmount":50000,				//分销渠道销售业绩
+		"rebate":0.05,						//返点比例5%
+		"unRebateAmount":1000,					//待返点金额
+		"hadRebateAmount":2000,					//已饭店金额
+		"status":1							//渠道状态 0 停用 1启用
+	}
+}
+
+
+--------------响应信息-------------
+{
+	"code": 0,
+	"msg": "",
+	"data": {}
+}
